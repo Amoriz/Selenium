@@ -28,12 +28,12 @@ public class Connexion {
 		selenium.waitForPageToLoad("30000");
 		selenium.type("id=j_username", "test");
 		selenium.type("id=j_password", "test");
-		selenium.click("css=button.btn.btn-default");
+		selenium.click("css=input.btn.btn-default");
 		selenium.waitForPageToLoad("30000");
-		assertEquals("Invalid username and password!", selenium.getText("css=div.alert.alert-danger"));
+		assertEquals("Username ou mot de passe invalide!", selenium.getText("css=div.alert.alert-danger"));
 		selenium.type("id=j_username", "akraxx");
 		selenium.type("id=j_password", "123456");
-		selenium.click("css=button.btn.btn-default");
+		selenium.click("css=input.btn.btn-default");
 		selenium.waitForPageToLoad("30000");
 		assertTrue(selenium.isElementPresent("link=akraxx"));
 		selenium.open("/logout");

@@ -28,12 +28,12 @@ public class VoirTrajets {
 		selenium.waitForPageToLoad("30000");
 		selenium.type("id=j_username", "akraxx");
 		selenium.type("id=j_password", "123456");
-		selenium.click("css=button.btn.btn-default");
+		selenium.click("css=input.btn.btn-default");
 		selenium.waitForPageToLoad("30000");
 		selenium.open("/profile/journeys");
 		selenium.waitForPageToLoad("30000");
 		assertEquals("Carpooling - Profile - Trajets", selenium.getTitle());
-		assertEquals("36 Rue Paul Doumer, 59120 Loos, France", selenium.getText("css=div.col-md-4.text-right"));
+		assertEquals("36 Rue Paul Doumer, 59120 Loos, France", selenium.getText("//div[@id='journey-head-2']/div/div[2]"));
 		selenium.open("/logout");
 		selenium.waitForPageToLoad("30000");
 	}

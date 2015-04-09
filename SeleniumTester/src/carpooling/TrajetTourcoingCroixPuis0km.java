@@ -33,6 +33,7 @@ public class TrajetTourcoingCroixPuis0km {
 		selenium.type("id=departure", "Tourcoing, France");
 		selenium.type("id=arrival", "Croix");
 		selenium.open("/stopoff/search?date=07%2F04%2F2015+16%3A26&departure.address=Tourcoing%2C+France&departure.latitude=3.1620699999999715&departure.longitude=50.724993&arrival.address=Croix%2C+France&arrival.latitude=3.1487190000000282&arrival.longitude=50.67731999999999#result");
+		selenium.waitForPageToLoad("50000");
 		assertTrue(selenium.isElementPresent("css=h3"));
 		selenium.type("id=departure.precision", "0");
 		selenium.type("id=arrival.precision", "0");
